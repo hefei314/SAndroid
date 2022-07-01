@@ -1,0 +1,16 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'libs', 'module_pay/libs'
+        }
+    }
+}
+rootProject.name = "SAndroid"
+include ':app'
+include ':module_pay'
+include ':module_matisse'

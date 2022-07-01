@@ -1,0 +1,7 @@
+<resources translatable="false">
+    <string name="app_name">SAndroid</string>
+
+    <string name="navigation_function">Function</string>
+    <string name="navigation_widget">Widget</string>
+    <string name="navigation_animate">Animate</string>
+</resources>

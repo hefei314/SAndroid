@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Skeleton",
+    "target": "com.hefei.sandroid.modules.function.skeleton.SkeletonActivity"
+  },
+  {
+    "title": "SnapHelper",
+    "target": "com.hefei.sandroid.modules.function.snaphelper.SnapHelperActivity"
+  },
+  {
+    "title": "ViewPager2",
+    "target": "com.hefei.sandroid.modules.function.viewpager2.ViewPager2Activity"
+  },
+  {
+    "title": "PictureSelector",
+    "target": "com.hefei.sandroid.modules.function.pictureselector.PictureSelectorActivity"
+  },
+  {
+    "title": "CoordinatorLayout",
+    "target": "com.hefei.sandroid.modules.function.coordinator.CoordinatorLayoutActivity"
+  }
+]

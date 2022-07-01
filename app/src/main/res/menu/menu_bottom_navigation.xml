@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/function"
+        android:title="@string/navigation_function"
+        android:icon="@drawable/navigation_function_24dp"/>
+
+    <item
+        android:id="@+id/widget"
+        android:title="@string/navigation_widget"
+        android:icon="@drawable/navigation_widget_24dp"/>
+
+    <item
+        android:id="@+id/animate"
+        android:title="@string/navigation_animate"
+        android:icon="@drawable/navigation_animate_24dp"/>
+
+</menu>
