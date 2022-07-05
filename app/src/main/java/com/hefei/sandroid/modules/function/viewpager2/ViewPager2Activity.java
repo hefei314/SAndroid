@@ -5,8 +5,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.blankj.utilcode.util.ConvertUtils;
 import com.hefei.sandroid.R;
 import com.hefei.sandroid.databinding.ActivityViewPager2Binding;
 import com.hefei.sandroid.modules.common.NormalFragment;
@@ -48,6 +52,16 @@ public class ViewPager2Activity extends BaseBindingActivity<ActivityViewPager2Bi
                 super.onPageSelected(position);
             }
         });
+
+        CompositePageTransformer transformer = new CompositePageTransformer();
+        //transformer.addTransformer(new ZoomOutPageTransformer());
+        transformer.addTransformer(new MarginPageTransformer(ConvertUtils.dp2px(10)));
+
+        RecyclerView recyclerView = (RecyclerView) mViewBinding.viewPager.getChildAt(0);
+        recyclerView.setPadding(ConvertUtils.dp2px(20), 0, ConvertUtils.dp2px(20), 0);
+        recyclerView.setClipToPadding(false);
+
+        mViewBinding.viewPager.setPageTransformer(transformer);
     }
 
     @Override
