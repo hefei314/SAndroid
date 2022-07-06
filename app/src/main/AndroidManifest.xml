@@ -55,6 +55,9 @@
         <activity android:name=".modules.function.pictureselector.PictureSelectorActivity" />
         <activity android:name=".modules.function.coordinator.CoordinatorLayoutActivity" />
 
+        <!-- widget -->
+        <activity android:name=".modules.widget.WidgetTestActivity" />
+
     </application>
 
 </manifest>
