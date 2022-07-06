@@ -30,4 +30,7 @@
 
     <color name="textHint">#CBCBCB</color>
     <color name="textNormal">#333333</color>
+    <color name="textBlack3">#333333</color>
+    <color name="textBlack6">#666666</color>
+    <color name="textBlack9">#999999</color>
 </resources>

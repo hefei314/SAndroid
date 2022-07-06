@@ -3,6 +3,7 @@ package com.hefei.sandroid.modules.function.snaphelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.PagerSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
@@ -31,16 +32,17 @@ public class SnapHelperActivity extends BaseBindingActivity<ActivitySnapHelperBi
     protected void initViews() {
         initToolbar(mViewBinding.toolbar, mTitle, true);
 
-        mViewBinding.rvImage.setLayoutManager(new LinearLayoutManager(this));
-        mViewBinding.rvImage.setAdapter(imageListAdapter);
+        mViewBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        mViewBinding.recyclerView.setAdapter(imageListAdapter);
 
-        /*
-        LinearSnapHelper linearSnapHelper = new LinearSnapHelper();
-        linearSnapHelper.attachToRecyclerView(mViewBinding.rvImage);
-        */
+//        LinearSnapHelper linearSnapHelper = new LinearSnapHelper();
+//        linearSnapHelper.attachToRecyclerView(mViewBinding.recyclerView);
 
-        PagerSnapHelper pagerSnapHelper = new PagerSnapHelper();
-        pagerSnapHelper.attachToRecyclerView(mViewBinding.rvImage);
+//        PagerSnapHelper pagerSnapHelper = new PagerSnapHelper();
+//        pagerSnapHelper.attachToRecyclerView(mViewBinding.recyclerView);
+
+        GallerySnapHelper gallerySnapHelper = new GallerySnapHelper();
+        gallerySnapHelper.attachToRecyclerView(mViewBinding.recyclerView);
 
         imageListAdapter.setNewInstance(DataRepository.getInstance().getImageList());
     }

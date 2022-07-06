@@ -37,6 +37,12 @@ public class DataRepository {
         list.add(R.drawable.img04);
         list.add(R.drawable.img05);
         list.add(R.drawable.img06);
+        list.add(R.drawable.img01);
+        list.add(R.drawable.img02);
+        list.add(R.drawable.img03);
+        list.add(R.drawable.img04);
+        list.add(R.drawable.img05);
+        list.add(R.drawable.img06);
         return list;
     }
 
