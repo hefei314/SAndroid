@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.multidex.MultiDexApplication;
 
 import com.blankj.utilcode.util.Utils;
+import com.hefei.sandroid.modules.widget.multiplestatus.MultipleStatusLayout;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 import com.scwang.smart.refresh.header.ClassicsHeader;
@@ -47,7 +48,29 @@ public class ThisApplication extends MultiDexApplication {
             Logger.addLogAdapter(new AndroidLogAdapter());
         }
 
+        initMultipleStatusLayout();
+
         SmartRefreshLayout.setDefaultRefreshHeaderCreator((context, layout) -> new ClassicsHeader(context));
+    }
+
+    /**
+     * 初始化全局多状态布局
+     */
+    private void initMultipleStatusLayout() {
+        MultipleStatusLayout.getConfig()
+                .setEmptyView(R.layout.layout_status_empty)
+                .setErrorView(R.layout.layout_status_error)
+                .setLoadingView(R.layout.layout_status_loading)
+                .setNoNetworkView(R.layout.layout_status_no_network)
+                .setEmptyImageViewId(R.id.iv_empty)
+                .setErrorImageViewId(R.id.iv_error)
+                .setNoNetworkImageViewId(R.id.iv_no_network)
+                .setEmptyTextViewId(R.id.tv_empty)
+                .setErrorTextViewId(R.id.tv_error)
+                .setNoNetworkTextViewId(R.id.tv_no_network)
+                .setEmptyRetryViewId(R.id.btn_retry)
+                .setErrorRetryViewId(R.id.btn_retry)
+                .setNoNetworkRetryViewId(R.id.btn_retry);
     }
 
     /**

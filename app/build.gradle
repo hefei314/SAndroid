@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
 }
 
 android {
@@ -73,6 +74,8 @@ dependencies {
     implementation project(':module_matisse')
     implementation project(':module_pay')
 
+    // kotlin
+    implementation rootProject.ext.dependencies["kotlin"]
     // appcompat
     api rootProject.ext.dependencies["appcompat"]
     api rootProject.ext.dependencies["annotation"]
@@ -83,9 +86,9 @@ dependencies {
     api rootProject.ext.dependencies["vectordrawable"]
     api rootProject.ext.dependencies["constraintLayout"]
     api rootProject.ext.dependencies["multidex"]
-    // ViewModel and LiveData
-    api rootProject.ext.dependencies["viewModel"]
+    // LiveData and ViewModel
     api rootProject.ext.dependencies["liveData"]
+    api rootProject.ext.dependencies["viewModel"]
     // gson
     api rootProject.ext.dependencies["gson"]
     // logger

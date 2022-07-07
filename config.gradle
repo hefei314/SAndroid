@@ -1,9 +1,11 @@
 ext {
-    compileSdkVersion = 30
+    compileSdkVersion = 32
     minSdkVersion = 21
-    targetSdkVersion = 30
+    targetSdkVersion = 32
 
     versions = [
+            kotlinVersion                : "1.5.0",
+
             /* androidx */
             appcompatVersion             : "1.3.1",
             materialVersion              : "1.4.0",
@@ -20,6 +22,11 @@ ext {
             /* lifecycle */
             lifecycleVersion             : "2.3.1",
 
+            /* test */
+            junitVersion                 : "4.12",
+            junitExtVersion              : "1.1.2",
+            espressoCoreVersion          : "3.3.0",
+
             /* okhttp */
             okhttpVersion                : "4.9.1",
 
@@ -34,11 +41,6 @@ ext {
 
             /* RxBinding */
             rxbindingVersion             : "4.0.0",
-
-            /* test */
-            junitVersion                 : "4.12",
-            junitExtVersion              : "1.1.2",
-            espressoCoreVersion          : "3.3.0",
 
             /* gson */
             gsonVersion                  : "2.8.8",
@@ -104,6 +106,8 @@ ext {
     ]
 
     dependencies = [
+            kotlin                    : "androidx.core:core-ktx:${versions["kotlinVersion"]}",
+
             appcompat                 : "androidx.appcompat:appcompat:${versions["appcompatVersion"]}",
             material                  : "com.google.android.material:material:${versions["materialVersion"]}",
             cardview                  : "androidx.cardview:cardview:${versions["cardviewVersion"]}",
@@ -116,10 +120,14 @@ ext {
 
             multidex                  : "androidx.multidex:multidex:${versions["multidexVersion"]}",
 
-            viewModel                 : "androidx.lifecycle:lifecycle-viewmodel:${versions["lifecycleVersion"]}",
             liveData                  : "androidx.lifecycle:lifecycle-livedata:${versions["lifecycleVersion"]}",
+            viewModel                 : "androidx.lifecycle:lifecycle-viewmodel:${versions["lifecycleVersion"]}",
             commonJava8               : "androidx.lifecycle:lifecycle-common-java8:${versions["lifecycleVersion"]}",
             viewmodelSavedstate       : "androidx.lifecycle:lifecycle-viewmodel-savedstate:${versions["lifecycleVersion"]}",
+
+            junit                     : "junit:junit:${versions["junitVersion"]}",
+            junitExt                  : "androidx.test.ext:junit:${versions["junitExtVersion"]}",
+            espressoCore              : "androidx.test.espresso:espresso-core:${versions["espressoCoreVersion"]}",
 
             disklrucache              : 'com.jakewharton:disklrucache:2.0.2',
 
@@ -147,10 +155,6 @@ ext {
             rxbindingSwiperefresh     : "com.jakewharton.rxbinding4:rxbinding-swiperefreshlayout:${versions["rxbindingVersion"]}",
             rxbindingViewpager        : "com.jakewharton.rxbinding4:rxbinding-viewpager:${versions["rxbindingVersion"]}",
             rxbindingMaterial         : "com.jakewharton.rxbinding4:rxbinding-material:${versions["rxbindingVersion"]}",
-
-            junit                     : "junit:junit:${versions["junitVersion"]}",
-            junitExt                  : "androidx.test.ext:junit:${versions["junitExtVersion"]}",
-            espressoCore              : "androidx.test.espresso:espresso-core:${versions["espressoCoreVersion"]}",
 
             gson                      : "com.google.code.gson:gson:${versions["gsonVersion"]}",
 
