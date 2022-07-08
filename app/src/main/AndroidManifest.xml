@@ -52,6 +52,7 @@
         <activity android:name=".modules.function.skeleton.SkeletonActivity" />
         <activity android:name=".modules.function.snaphelper.SnapHelperActivity" />
         <activity android:name=".modules.function.viewpager2.ViewPager2Activity" />
+        <activity android:name=".modules.function.touch.TouchDispatchActivity" />
         <activity android:name=".modules.function.pictureselector.PictureSelectorActivity" />
         <activity android:name=".modules.function.coordinator.CoordinatorLayoutActivity" />
 

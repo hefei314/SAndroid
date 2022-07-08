@@ -12,6 +12,10 @@
     "target": "com.hefei.sandroid.modules.function.viewpager2.ViewPager2Activity"
   },
   {
+    "title": "TouchDispatch",
+    "target": "com.hefei.sandroid.modules.function.touch.TouchDispatchActivity"
+  },
+  {
     "title": "PictureSelector",
     "target": "com.hefei.sandroid.modules.function.pictureselector.PictureSelectorActivity"
   },
