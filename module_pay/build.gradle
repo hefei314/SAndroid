@@ -27,7 +27,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     // 支付宝支付
-    implementation(name: 'alipaysdk-noutdid-15.8.03.210428205839', ext: 'aar')
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
     // 微信支付
     api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9'
 }

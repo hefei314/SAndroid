@@ -14,7 +14,7 @@ public class WidgetTestActivity extends BaseBindingActivity<ActivityWidgetTestBi
 
     @Override
     protected void initViews() {
-
+        initToolbar(mViewBinding.toolbar, mTitle, true);
     }
 
     @Override
