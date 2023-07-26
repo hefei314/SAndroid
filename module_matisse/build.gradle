@@ -3,11 +3,14 @@ plugins {
 }
 
 android {
+    namespace 'com.zhihu.matisse'
     compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -16,6 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -23,7 +27,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["annotation"]
     implementation rootProject.ext.dependencies["recyclerview"]
